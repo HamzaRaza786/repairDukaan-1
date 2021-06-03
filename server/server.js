@@ -38,10 +38,12 @@ const workersRouter = require('./routes/workers');
 const bookingsRouter = require('./routes/Bookings');
 const startRouter = require('./routes/start');
 const ContactRouter = require('./routes/Contact');
+const reportsRouter = require('./routes/Reports');
 app.use('', workersRouter); 
 app.use('', bookingsRouter); 
 app.use('', startRouter); 
 app.use('', ContactRouter); 
+app.use('', reportsRouter); 
 
 
 
