@@ -20,11 +20,11 @@ export default function App() {
     <View style={styles.container}>
       
 
-      <Text style = {{color : 'white' , fontSize : 40, fontStyle: 'normal', width : 400, borderWidth: 2, borderRadius: 50, marginVertical: 10,  fontWeight : 'bold', backgroundColor: '#f4511e', textAlign : 'center'}}>How to Use?</Text>
-      <Text style = {{color : 'black' , fontSize : 20, fontStyle: 'normal', fontWeight:"bold", color:"#364f6b", width : 355, borderWidth: 2, borderRadius: 50, marginVertical: 15, textAlign : 'center'}}>Navigate to Home Page after successful login</Text>
-      <Text style = {{color : 'black' , fontSize : 20, fontStyle: 'normal', fontWeight:"bold", color:"#364f6b", width : 355, borderWidth: 2, borderRadius: 50, marginVertical: 15, textAlign : 'center'}}>Select request service to book an appropriate service</Text>
-      <Text style = {{color : 'black' , fontSize : 20, fontStyle: 'normal', fontWeight:"bold", color:"#364f6b", width : 355, borderWidth: 2, borderRadius: 50, marginVertical: 15, textAlign : 'center'}}>Enable Location Service to enable our tracker</Text>
-      <Text style = {{color : 'black' , fontSize : 20, fontStyle: 'normal', fontWeight:"bold", color:"#364f6b", width : 355, borderWidth: 2, borderRadius: 50, marginVertical: 15, textAlign : 'center'}}>Select the appropriate options of your choice and just click BOOK!</Text>
+      <Text style = {{color : 'white' , fontSize : 30, fontStyle: 'normal', width : 400, borderWidth: 2, borderRadius: 50, marginVertical: 10,  fontWeight : 'bold', backgroundColor: '#f4511e', borderColor: '#f4511e', textAlign : 'center'}}>HOW TO USE?</Text>
+      <Text style = {{color : 'black' , fontSize : 20, fontStyle: 'normal', fontWeight:"bold", color:"#364f6b", width : 355, borderWidth: 2, backgroundColor : "#fff", borderRadius: 50, marginVertical: 15, textAlign : 'center'}}>NAVIGATE TO HOME PAGE AFTER LOGIN</Text>
+      <Text style = {{color : 'black' , fontSize : 20, fontStyle: 'normal', fontWeight:"bold", color:"#364f6b", width : 355, borderWidth: 2, backgroundColor : "#fff", borderRadius: 50, marginVertical: 15, textAlign : 'center'}}>SELECT APPROPRIATE SERVICE TO BOOK</Text>
+      <Text style = {{color : 'black' , fontSize : 20, fontStyle: 'normal', fontWeight:"bold", color:"#364f6b", width : 355, borderWidth: 2, backgroundColor : "#fff", borderRadius: 50, marginVertical: 15, textAlign : 'center'}}>ENABLE LOCATION SERVICE FOR TRACKING</Text>
+      <Text style = {{color : 'black' , fontSize : 20, fontStyle: 'normal', fontWeight:"bold", color:"#364f6b", width : 355, borderWidth: 2, backgroundColor : "#fff", borderRadius: 50, marginVertical: 15, textAlign : 'center'}}>ENTER SUBMIT TO COMPLETE BOOKING!</Text>
     </View>
     </SafeAreaProvider>
   );
@@ -51,7 +51,7 @@ lineStyle2:{
     height: '100%',
     flex: 1,
     position: 'relative',
-    backgroundColor: '#f6f6f',
+    backgroundColor: '#f6f6f6',
     alignItems: 'center',
     justifyContent: 'flex-start',
   },
