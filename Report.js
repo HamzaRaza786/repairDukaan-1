@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Alert } from 'react-native';
 import { StyleSheet, CheckBox, StatusBar, SafeAreaView, Text, TouchableOpacity, View } from 'react-native';
 import { SafeAreaProvider } from 'react-native-safe-area-context';
+import axios from 'axios';
 
 
 export default function App() {
@@ -11,12 +12,102 @@ export default function App() {
     const [isSelected3, setSelection3] = useState(false);
     const [isSelected4, setSelection4] = useState(false);
 
-    /*const initialize = () => {
-        setSelection1(false);
-        setSelection2(false);
-        setSelection3(false);
-        setSelection4(false);
-      }*/
+    var title1 = "Mechanic's demanour was inappropriate";
+    var title2 = "Mechanic charged extra for the service";
+    var title3 = "Mechanic arrived late with no plausible reason";
+    var title4 = "Mechanic was ill-skilled for the task at hand";
+
+    
+    
+
+      const Toggle_checkbox=()=>{
+
+
+        if (isSelected1 == true){
+          setSelection1(!isSelected1);
+      }
+      else {
+        title1 = "";
+      }
+      if (isSelected2 == true){
+        setSelection2(!isSelected2);
+    }
+    else {
+      title2 = "";
+    }
+    if (isSelected3 == true){
+      setSelection3(!isSelected3);
+    }
+    else {
+      title3 = "";
+    }
+    if (isSelected4 == true){
+      setSelection4(!isSelected4);
+    }
+    else {
+      title4 = "";
+    }
+
+
+       
+      handleLogIn();
+
+      Alert.alert(
+        "REPORT",
+        "Your problem has been reported",
+        [
+          {
+            text: "Cancel",
+            onPress: () => console.log("Cancel Pressed"),
+            style: "cancel"
+          },
+          { text: "OK", onPress: () => console.log("OK Pressed") }
+        ]
+      );
+  
+       
+           
+          }
+
+
+
+          React.useEffect(() => {
+            handleLogIn();
+          }, []);
+      
+          const handleLogIn = async () => {
+            try {
+              const body = { title1, title2, title3, title4};
+               await fetch( 
+                "http://192.168.8.100:3000/report/register",
+                {
+                  method: "POST",
+                  headers: {
+                    "Content-type": "application/json"
+                  },
+                  body: JSON.stringify(body)
+                }
+              ).then((response) => response.json())
+              .then((responseJson) => {
+              if (responseJson.status === 'success') {
+                console.log("Registration successful");
+                setRegSucc(true);
+              }
+              else {
+                return(
+                  Alert.alert(responseJson)
+                )
+              }
+            })}
+             catch (err) {
+              console.error(err.message);
+            }
+          };
+      
+      
+
+
+
     
   return (
    
@@ -77,7 +168,7 @@ export default function App() {
         <Text style={styles.label}>Mechanic was ill-skilled for the task at hand</Text>
       </View>
 
-      <TouchableOpacity style={styles.submit} onPress = {Alert("Report Submitted")}>
+      <TouchableOpacity style={styles.submit} onPress = {() => Toggle_checkbox()}>
             <Text style={{color:"white", fontWeight: 'bold', fontSize : 20, }}>SUBMIT</Text>
         </TouchableOpacity>
       
@@ -135,7 +226,7 @@ lineStyle2:{
     alignSelf: "center",
   },
   label: {
-    margin: 2,
+    margin: 8,
     fontSize: 18,
     borderWidth: 2,
     width: 280,
@@ -144,6 +235,7 @@ lineStyle2:{
     color: '#364f6b',
     borderRadius:20,
     backgroundColor : '#fff',
+    borderColor : '#fff',
     padding:5,
     marginBottom:5,
     flexDirection:"row",
@@ -160,7 +252,7 @@ lineStyle2:{
     fontSize:30,
     fontWeight:"bold",
     color:"#364f6b",
-    marginBottom:50,
+    marginBottom:30,
     marginVertical: 10,
   }
 });
