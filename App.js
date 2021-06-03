@@ -63,7 +63,7 @@ function ContactStack({ navigation }) {
           headerTitleStyle: {
             fontWeight: 'bold',
             textAlign : 'center', //Set Header text style
-            fontSize: 30
+            fontSize: 42
           },
         }}
       />
@@ -91,7 +91,7 @@ function HowToUseStack({ navigation }) {
           headerTitleStyle: {
             fontWeight: 'bold',
             textAlign : 'center', //Set Header text style
-            fontSize: 30
+            fontSize: 42
           },
         }}
       />
@@ -119,7 +119,7 @@ function RatesStack({ navigation }) {
           headerTitleStyle: {
             fontWeight: 'bold',
             textAlign : 'center', //Set Header text style
-            fontSize: 30
+            fontSize: 42
           },
         }}
       />
@@ -147,7 +147,7 @@ function ReportStack({ navigation }) {
           headerTitleStyle: {
             fontWeight: 'bold',
             textAlign : 'center', //Set Header text style
-            fontSize: 30
+            fontSize: 42
           },
         }}
       />
@@ -177,7 +177,7 @@ function WaitStack({ navigation }) {
           headerTitleStyle: {
             fontWeight: 'bold',
             textAlign : 'center', //Set Header text style
-            fontSize: 30
+            fontSize: 42
           },
         }}
       />
@@ -205,7 +205,7 @@ function HomeStack({ navigation }) {
         headerTitleStyle: {
           fontWeight: 'bold', //Set Header text style
           textAlign : 'center', //Set Header text style
-          fontSize: 30
+          fontSize: 42
         },
       }}>
       <Stack.Screen
