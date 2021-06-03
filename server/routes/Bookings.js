@@ -32,8 +32,8 @@ router.route('/booking/register').post((req, res) => {
   .catch(err => res.status(400).json('Error: ' + err));
 });
 
-router.route('/getBooking/:id').get((req, res) => {
-  Bookings.findById(req.params.id)
+router.route('/getBooking/:Email').get((req, res) => {
+  Bookings.find({Email : req.params.Email})
     .then(Bookings => res.json(Bookings))
     .catch(err => res.status(400).json('Error: ' + err));
 });
